@@ -1,0 +1,9 @@
+Id	Type	RefrigerationFlag	PowerFlag	Length	Cubes	EuroPricePerKm
+1	Standard	Yes	NL	6,10	54	30,00
+2	Protected	No	B	6,10	54	20,00
+3	Safe	Yes	USA	12,20	108	50,00
+4	Secret	Yes	GB	12,20	108	50,00
+5	Standard	No	I	6,10	54	20,00
+6	Safe	No	D	6,10	54	50,00
+7	anti-explosion	No	China	6,10	54	60,00
+8	Secret	No	N	6,10	54	60,00

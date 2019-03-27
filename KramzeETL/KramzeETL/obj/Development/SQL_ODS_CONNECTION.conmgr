@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SQL_ODS_CONNECTION"
+  DTS:DTSID="{8A24ACF8-3E69-4818-A8E3-EB02FCA4933D}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=AEI-SQL.AVANS.NL\STUDENTEN,1443;User ID=s2126940;Initial Catalog=s2126940_Project2;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+2Eh888Rc0K5yvxkGxFToQAAAAACAAAAAAAQZgAAAAEAACAAAABnrcJkEXDNJRDlcWm8uHe30pMr2g0IM/bjx7PmYb0zewAAAAAOgAAAAAIAACAAAAAZJBJ5DbpJtubfBVghkolUDNEUj7uJS3/g+u3jAHflVIAAAADTuvfgG4wcCX271qXFXh2UovrmfcuiYlgvj5hPJ9ha0qeCxO0sEA076EGRmH7XwO9p00ulvNEd+JkTfrjHM+1y+9+zndV26FJqgDWGFaYl3KapojOYW75HifE3Ljzn3G1e2e0ai5XfIq2PFnqEVBB2WNw0u9pN/x0OP4RIBvJGEEAAAAACE+5VC7Gr72zs/LLlHMynPUKzu2XWpMk7m68TPoGpmWNQEOn7XTtpCtzBmnUWDczs7U4sfkylQGi3z5lQ6f6M</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

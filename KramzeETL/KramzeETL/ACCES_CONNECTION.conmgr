@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ACCES_CONNECTION"
+  DTS:DTSID="{7A36A222-27E9-48C7-8804-9C7C16DE74EB}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=C:\Users\Kevin van Loon\Documents\GitHub\Kramze-Bi-Project\Kramze-BI-Project\ProjectSources\KramseTPS v2.mdb;Provider=Microsoft.Jet.OLEDB.4.0;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
