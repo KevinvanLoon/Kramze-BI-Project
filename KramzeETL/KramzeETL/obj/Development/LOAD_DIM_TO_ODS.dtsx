@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LOAD_DIM_TO_ODS"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{7A200242-04AD-41F2-848A-851B61539FE1}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{304C2A1F-CE74-4655-8851-0D3D45C770B6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2860,7 +2860,7 @@ where [refTable].[PORT_ID_CURRENT] = ?</property>
         <NodeLayout
           Size="134,42"
           Id="Package\CLEAR ODS"
-          TopLeft="181,17" />
+          TopLeft="179,16" />
         <NodeLayout
           Size="191,42"
           Id="Package\LOAD CONSIGNOR DIM"
@@ -2872,7 +2872,7 @@ where [refTable].[PORT_ID_CURRENT] = ?</property>
         <NodeLayout
           Size="156,42"
           Id="Package\LOAD ITEM DIM"
-          TopLeft="182,190" />
+          TopLeft="180,189" />
         <NodeLayout
           Size="158,42"
           Id="Package\LOAD PORT DIM"
@@ -2880,14 +2880,14 @@ where [refTable].[PORT_ID_CURRENT] = ?</property>
         <NodeLayout
           Size="155,42"
           Id="Package\LOAD SHIP DIM"
-          TopLeft="181,102" />
+          TopLeft="179,101" />
         <NodeLayout
           Size="171,42"
           Id="Package\LOAD VOYAGE DIM"
           TopLeft="174,518" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="259.25,144">
+          TopLeft="257.25,143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2909,18 +2909,18 @@ where [refTable].[PORT_ID_CURRENT] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="257.75,232">
+          TopLeft="256.75,231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,27.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2997,7 +2997,7 @@ where [refTable].[PORT_ID_CURRENT] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="248,59">
+          TopLeft="246,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="EXTRACT-TRANSFER-LOAD"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{CE3A93C7-C9AF-4E1D-8E7D-2CC92D97F628}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{06B333D3-344B-4DAC-859E-CDAAD3A0A7A3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -47,7 +47,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>LOAD_DIM_TO_ODS.dtsx</PackageName>
+          <PackageName>NEW_LOAD_ODS_DIM.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -64,7 +64,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>LOAD_FACTS_TO_ODS.dtsx</PackageName>
+          <PackageName>NEW_LOAD_ODS_FACTS.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -129,6 +129,14 @@
           Id="Package\EXTRACT"
           TopLeft="126,201" />
         <NodeLayout
+          Size="166,42"
+          Id="Package\LOAD DIMENSION"
+          TopLeft="619,204" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\LOAD FACTS"
+          TopLeft="664,333" />
+        <NodeLayout
           Size="139,42"
           Id="Package\TRANSFORM"
           TopLeft="368,197" />
@@ -154,10 +162,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\LOAD DIMENSION"
-          TopLeft="619,204" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="507,221.5">
@@ -180,10 +184,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\LOAD FACTS"
-          TopLeft="664,333" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="702,246">

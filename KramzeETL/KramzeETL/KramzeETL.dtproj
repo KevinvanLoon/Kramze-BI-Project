@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-V3POJ1J</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+2Eh888Rc0K5yvxkGxFToQAAAAACAAAAAAAQZgAAAAEAACAAAAD5wCU0IqN6zU3iI3LYR3S5Xo6uSWFJI+kxxRpPvMKqTAAAAAAOgAAAAAIAACAAAABlZXZWJAYJhMFSmYq5i2X9/b2fdehpOY5C2+khqHmlqZAAAACzF+bZizTGdd1sm/0qawzUvAT2Ln03vWY9mb4fqa1KdWWpp+hO30mhTMjPx4krpdABmJ36GNqVtBx8iVRXg6eFVhIBKp/ms00tRBnLqirheSYopO4lbVjfbAVMYlDu+3q0niWanNKSISC49YiHMFIAWyN4XVVuUDepqg48ypVSj/qSxj82HKY6PsrkMXi+X6RAAAAAputLTZGjRIdmn2jJBddXdj1/1bbgs0NzspMBh+g+WTZ5nwe3NoseFlZITkXgTtVTA+VWlG2gGxcqdMbSyjrCbw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+2Eh888Rc0K5yvxkGxFToQAAAAACAAAAAAAQZgAAAAEAACAAAACSe4W8DNaku8fQoLR6SwOVTB9mQhc1u1vqCiBJu7IpLwAAAAAOgAAAAAIAACAAAAAT1lUuB6nirbWhDWDK4UYj826m24tJmpPZf6OhHJOj3pAAAAB87Tje0TEENCbYgiUtCqARWeXC0ygo7ADTxfQ6GyYEqnf27yywE3XtzmcQqKS0jMAzR/hG2OlcS3K/Gj87ZixM378gKk7uH/CO0Ke3Xu9azWlb7VbYJ7VLE+m1xNCct7itw4obIc57fSxkAVs/+GLBb1PpBcek/WyouqiP/U9jeVle81gxmc4iIgRSbKp2SdhAAAAA6PySR69S4j64foi/7T/JHEVzjoyZigyxz2827eh+nQn9PKroNqsBTVmc0mTMrJtzyREVS3EMjMN+f+BlyhN8tA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,8 @@
           <SSIS:Package SSIS:Name="EXTRACT-TRANSFER-LOAD.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="LOAD_DIM_TO_ODS.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="LOAD_FACTS_TO_ODS.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="NEW_LOAD_ODS_DIM.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="NEW_LOAD_ODS_FACTS.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SQL_PSA_CONNECTION.conmgr" />
@@ -43,6 +45,7 @@
           <SSIS:ConnectionManager SSIS:Name="COUNTRY_EXCEL_CONNECTION.conmgr" />
           <SSIS:ConnectionManager SSIS:Name="CONTAINER_FLATFILE_CONNECTION.conmgr" />
           <SSIS:ConnectionManager SSIS:Name="SQL_ODS_CONNECTION.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="SQL_NEW_ODS.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
@@ -649,7 +652,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=AEI-SQL.AVANS.NL\STUDENTEN,1443;User ID=s2126940;Initial Catalog=s2126940_Project2;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=AEI-SQL.AVANS.NL\STUDENTEN,1443;User ID=s2126940;Initial Catalog=s2126940_Project2;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -727,6 +730,95 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.ConnectionString">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=AEI-SQL.AVANS.NL\STUDENTEN,1443;User ID=s2126940;Initial Catalog=s2126940_Project3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.InitialCatalog">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">s2126940_Project3</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.Password">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.RetainSameConnection">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.ServerName">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">AEI-SQL.AVANS.NL\STUDENTEN,1443</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.SQL_NEW_ODS.UserName">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">s2126940</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="SOURCES_TO_PSA.dtsx">
@@ -735,10 +827,10 @@
                 <SSIS:Property SSIS:Name="Name">SOURCES_TO_PSA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">17</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EBB6CD35-222C-4831-9D4C-FDF6BA0A1521}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{839AD7B5-E9A6-4F98-9257-57D053E9CED3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -769,10 +861,10 @@
                 <SSIS:Property SSIS:Name="Name">EXTRACT-TRANSFER-LOAD</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{80F73CBD-106D-4EF3-8370-3BE9ABCCF758}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5C51CE13-7350-40CC-B60C-6C606DB839F8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -786,10 +878,10 @@
                 <SSIS:Property SSIS:Name="Name">LOAD_DIM_TO_ODS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{74EC27BA-5738-4582-9B6E-82B9A6381F16}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{304C2A1F-CE74-4655-8851-0D3D45C770B6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -803,10 +895,44 @@
                 <SSIS:Property SSIS:Name="Name">LOAD_FACTS_TO_ODS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{230151B1-910D-44E3-90AB-1CE3D32609D2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="NEW_LOAD_ODS_DIM.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{13677132-5657-4DB6-8531-ECE7F8BFE49C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">NEW_LOAD_ODS_DIM</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E3A4A140-C881-4795-84B1-F01E0F5D6980}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3E1F6E9E-BEB8-4D1B-804B-573294BDE093}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="NEW_LOAD_ODS_FACTS.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{73B7D278-CA12-4403-9398-09AA2ED0D31F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">NEW_LOAD_ODS_FACTS</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{ACA170A8-8310-4426-856A-00E0820187D0}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

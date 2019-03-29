@@ -1,0 +1,160 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c04b3cfb-05cb-41b6-9b64-c97e5a6b48e6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM CONSIGNOR</ID>
+  <Name>DIM CONSIGNOR</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="69c31eff-3d56-44c9-866a-aefd73b769c4">
+    <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="c59e4a03-5dcb-4ee0-93f8-f7ce7d743839">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="352a88d3-3daf-47b3-bc8f-f8e52213b158">
+      <ID>CONSIGNOR ID</ID>
+      <Name>CONSIGNOR ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c17ae7e9-d5fd-490e-994b-69c43e6aad0a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="faf7281a-d6a8-49a4-bc40-239614078d2d">
+            <TableID>dbo_DIM_CONSIGNOR</TableID>
+            <ColumnID>CONSIGNOR_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="41350535-659f-45c2-baa8-333592bc11ee">
+          <AttributeID>CONSIGNOR NAME</AttributeID>
+          <Name>CONSIGNOR NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="060186df-ad2c-4131-ae14-3da6a92d8f5c">
+          <AttributeID>CONSIGNOR CITY</AttributeID>
+          <Name>CONSIGNOR CITY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="56659002-6b05-4778-9cec-f6566bf9ee01">
+          <AttributeID>CONSIGNOR COUNTRY</AttributeID>
+          <Name>CONSIGNOR COUNTRY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3c5fe792-f391-4cc2-b08d-40fe63b7ac5e">
+          <AttributeID>CONSIGNOR DISCOUNT</AttributeID>
+          <Name>CONSIGNOR DISCOUNT</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ea8f646a-eeb3-468a-ad83-8858b04f4277">
+      <ID>CONSIGNOR NAME</ID>
+      <Name>CONSIGNOR NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="49832f74-f8f9-4c1f-9681-3d1bf8906b0a">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32a6b162-75ab-4a81-ad5b-9e610be1f46b">
+            <TableID>dbo_DIM_CONSIGNOR</TableID>
+            <ColumnID>CONSIGNOR_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ea6d991f-0e8b-414b-a577-81d261aea99b">
+      <ID>CONSIGNOR CITY</ID>
+      <Name>CONSIGNOR CITY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c98ee822-e833-46b2-ba06-215d7bd7dd95">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bede4e3c-4c21-4be2-81d5-6a0dca9941bc">
+            <TableID>dbo_DIM_CONSIGNOR</TableID>
+            <ColumnID>CONSIGNOR_CITY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78bafcb6-25df-4782-a3d8-ada82eeab10f">
+      <ID>CONSIGNOR COUNTRY</ID>
+      <Name>CONSIGNOR COUNTRY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f665d451-d97d-493b-b52e-207f9ab0697b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83a73bf8-95a0-4241-8fe7-865290cc8097">
+            <TableID>dbo_DIM_CONSIGNOR</TableID>
+            <ColumnID>CONSIGNOR_COUNTRY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e3489931-c8a9-4abe-912f-addfc9fe32b0">
+      <ID>CONSIGNOR DISCOUNT</ID>
+      <Name>CONSIGNOR DISCOUNT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1a799007-6f3a-4dcf-8e60-25d6256c000c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b39807b-d332-421b-afec-d062e348b676">
+            <TableID>dbo_DIM_CONSIGNOR</TableID>
+            <ColumnID>CONSIGNOR_DISCOUNT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

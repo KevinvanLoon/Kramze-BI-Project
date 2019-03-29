@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LOAD_FACTS_TO_ODS"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{A944121F-865C-4E78-B681-8ED71C782213}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{230151B1-910D-44E3-90AB-1CE3D32609D2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -94,6 +94,11 @@
                       cachedDataType="i4"
                       cachedName="VOYAGE_ID"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[VOYAGE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -269,6 +274,19 @@
                           name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[VOYAGE_ID]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -358,6 +376,11 @@
                       cachedDataType="i4"
                       cachedName="SHIPMENT_DISTANCE"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -531,6 +554,371 @@
                           name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[SHIPMENT_DISTANCE]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge Join 2"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIP_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIP_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_ID"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_MAX_RANGE]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_MAX_RANGE"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_MAX_RANGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_MIN_RANGE]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_MIN_RANGE"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_MIN_RANGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_TYPE_ID]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_TYPE_ID"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_TYPE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[ITEM_ID]"
+                      cachedDataType="i4"
+                      cachedName="ITEM_ID"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[ITEM_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[VOYAGE_ID]"
+                      cachedDataType="i4"
+                      cachedName="VOYAGE_ID"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[VOYAGE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONSIGNOR_ID]"
+                      cachedDataType="i4"
+                      cachedName="CONSIGNOR_ID"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONSIGNOR_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[PORT_ID_FROM]"
+                      cachedDataType="i4"
+                      cachedName="PORT_ID_FROM"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[PORT_ID_FROM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[PORT_ID_TO]"
+                      cachedDataType="i4"
+                      cachedName="PORT_ID_TO"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[PORT_ID_TO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_DISTANCE]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_DISTANCE"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_MAX_NUMBER_CONTAIN"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_SPEED_IN_KNOTS]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KNOTS"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_SPEED_IN_KMH]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KMH"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_YEAR_COST]"
+                      cachedDataType="cy"
+                      cachedName="SHIP_YEAR_COST"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_YEAR_COST]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      name="SHIP_MAX_NUMBER_CONTAIN">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_MAX_NUMBER_CONTAIN]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      name="SHIP_SPEED_IN_KNOTS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_SPEED_IN_KNOTS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KMH]"
+                      name="SHIP_SPEED_IN_KMH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_SPEED_IN_KMH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_YEAR_COST]"
+                      name="SHIP_YEAR_COST">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input].Columns[SHIP_YEAR_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_ID]"
+                      name="SHIP_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIP_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_ID]"
+                      name="SHIPMENT_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MAX_RANGE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MAX_RANGE]"
+                      name="CONTAINER_MAX_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_MAX_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MIN_RANGE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MIN_RANGE]"
+                      name="CONTAINER_MIN_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_MIN_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_TYPE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_TYPE_ID]"
+                      name="CONTAINER_TYPE_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONTAINER_TYPE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[ITEM_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[ITEM_ID]"
+                      name="ITEM_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[ITEM_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[VOYAGE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[VOYAGE_ID]"
+                      name="VOYAGE_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[VOYAGE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONSIGNOR_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONSIGNOR_ID]"
+                      name="CONSIGNOR_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[CONSIGNOR_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_FROM]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_FROM]"
+                      name="PORT_ID_FROM">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[PORT_ID_FROM]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_TO]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_TO]"
+                      name="PORT_ID_TO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[PORT_ID_TO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_DISTANCE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_DISTANCE]"
+                      name="SHIPMENT_DISTANCE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_DISTANCE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -613,68 +1001,98 @@
                       cachedDataType="i4"
                       cachedName="SHIP_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIP_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIPMENT_ID]"
                       cachedDataType="i4"
                       cachedName="SHIPMENT_ID"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ITEM_ID]"
                       cachedDataType="i4"
                       cachedName="ITEM_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ITEM_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[ITEM_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[ITEM_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VOYAGE_ID]"
                       cachedDataType="i4"
                       cachedName="VOYAGE_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VOYAGE_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[VOYAGE_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[VOYAGE_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONSIGNOR_ID]"
                       cachedDataType="i4"
                       cachedName="CONSIGNOR_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONSIGNOR_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONSIGNOR_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONSIGNOR_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PORT_ID_FROM]"
                       cachedDataType="i4"
                       cachedName="PORT_ID_FROM"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PORT_ID_FROM]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[PORT_ID_FROM]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_FROM]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PORT_ID_TO]"
                       cachedDataType="i4"
                       cachedName="PORT_ID_TO"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PORT_ID_TO]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[PORT_ID_TO]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_TO]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIPMENT_DISTANCE]"
                       cachedDataType="i4"
                       cachedName="SHIPMENT_DISTANCE"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_DISTANCE]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTAINER_MIN_RANGE]"
                       cachedDataType="i4"
                       cachedName="CONTAINER_MIN_RANGE"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_CONTAINER_MIN_RANGE]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_MIN_RANGE]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MIN_RANGE]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTAINER_MAX_RANGE]"
                       cachedDataType="i4"
                       cachedName="CONTAINER_MAX_RANGE"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_CONTAINER_MAX_RANGE]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_MAX_RANGE]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MAX_RANGE]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTAINER_TYPE_ID]"
                       cachedDataType="i4"
                       cachedName="CONTAINER_TYPE_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTAINER_ID]"
-                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[CONTAINER_TYPE_ID]" />
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_TYPE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP_YEAR_COST]"
+                      cachedDataType="cy"
+                      cachedName="SHIP_YEAR_COST"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_YEAR_COST]"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_YEAR_COST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_MAX_NUMBER_CONTAIN"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MAX_NUMBER_CONTAIN]"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP_SPEED_IN_KNOTS]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KNOTS"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_SPEED_IN_KNOTS]"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP_SPEED_IN_KMH]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KMH"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_SPEED_IN_KMH]"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_CONTAINER_AMOUNT]"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -726,6 +1144,26 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROW_ID]"
                       dataType="i4"
                       name="ROW_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_YEAR_COST]"
+                      dataType="i4"
+                      name="SHIP_YEAR_COST" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      name="SHIP_MAX_NUMBER_CONTAIN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      name="SHIP_SPEED_IN_KNOTS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      name="SHIP_SPEED_IN_KMH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SHIPMENT_CONTAINER_AMOUNT]"
+                      dataType="i4"
+                      name="SHIPMENT_CONTAINER_AMOUNT" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1371,6 +1809,226 @@
                       refId="Package\Data Flow Task\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source 3"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 3"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_SHIP]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source 3.Connections[OleDbConnection]"
+                  connectionManagerID="{8A24ACF8-3E69-4818-A8E3-EB02FCA4933D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SQL_ODS_CONNECTION]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_ID]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_ID]"
+                      name="SHIP_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_NAME]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_NAME]"
+                      name="SHIP_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_MAX_NUMBER_CONTAIN]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      name="SHIP_MAX_NUMBER_CONTAIN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_SPEED_IN_KNOTS]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      name="SHIP_SPEED_IN_KNOTS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_SPEED_IN_KMH]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KMH]"
+                      name="SHIP_SPEED_IN_KMH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_COUNTRY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_COUNTRY]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_COUNTRY]"
+                      name="SHIP_COUNTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_YEAR_COST]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_YEAR_COST]"
+                      name="SHIP_YEAR_COST"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_ID]"
+                      dataType="i4"
+                      name="SHIP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_NAME]"
+                      dataType="wstr"
+                      length="50"
+                      name="SHIP_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      name="SHIP_MAX_NUMBER_CONTAIN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      name="SHIP_SPEED_IN_KNOTS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      name="SHIP_SPEED_IN_KMH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      name="SHIP_COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      name="SHIP_YEAR_COST" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_ID]"
+                      name="SHIP_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_NAME]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_NAME]"
+                      name="SHIP_NAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      name="SHIP_MAX_NUMBER_CONTAIN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      name="SHIP_SPEED_IN_KNOTS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_SPEED_IN_KMH]"
+                      name="SHIP_SPEED_IN_KMH" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_COUNTRY]"
+                      name="SHIP_COUNTRY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[SHIP_YEAR_COST]"
+                      name="SHIP_YEAR_COST" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2046,6 +2704,22 @@
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2186,6 +2860,19 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VOYAGE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2442,7 +3129,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2458,7 +3145,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2606,6 +3293,22 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 4.Inputs[Sort Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2620,7 +3323,8 @@
                       refId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIP_ID]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIP_ID]"
-                      name="SHIP_ID">
+                      name="SHIP_ID"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -2634,7 +3338,7 @@
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_ID]"
                       name="SHIPMENT_ID"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -2760,6 +3464,769 @@
                           name="SortColumnId">#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[SHIPMENT_DISTANCE]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 5"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 5"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SHIP_NAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_MAX_NUMBER_CONTAIN"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_MAX_NUMBER_CONTAIN]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_SPEED_IN_KNOTS]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KNOTS"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KNOTS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_SPEED_IN_KMH]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KMH"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KMH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_COUNTRY]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SHIP_COUNTRY"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_COUNTRY]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 5.Inputs[Sort Input].Columns[SHIP_YEAR_COST]"
+                      cachedDataType="cy"
+                      cachedName="SHIP_YEAR_COST"
+                      lineageId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_YEAR_COST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_ID]"
+                      name="SHIP_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_NAME]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_NAME]"
+                      name="SHIP_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      name="SHIP_MAX_NUMBER_CONTAIN">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_MAX_NUMBER_CONTAIN]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      name="SHIP_SPEED_IN_KNOTS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KNOTS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]"
+                      name="SHIP_SPEED_IN_KMH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_SPEED_IN_KMH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_COUNTRY]"
+                      name="SHIP_COUNTRY">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_COUNTRY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort 5.Outputs[Sort Output].Columns[SHIP_YEAR_COST]"
+                      name="SHIP_YEAR_COST">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[SHIP_YEAR_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 6"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 6"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_MAX_NUMBER_CONTAIN"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_MAX_NUMBER_CONTAIN]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIP_SPEED_IN_KNOTS]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KNOTS"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KNOTS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIP_SPEED_IN_KMH]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_SPEED_IN_KMH"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KMH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIP_YEAR_COST]"
+                      cachedDataType="cy"
+                      cachedName="SHIP_YEAR_COST"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_YEAR_COST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIP_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIP_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIPMENT_ID]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_ID"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[CONTAINER_MAX_RANGE]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_MAX_RANGE"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MAX_RANGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[CONTAINER_MIN_RANGE]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_MIN_RANGE"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MIN_RANGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[CONTAINER_TYPE_ID]"
+                      cachedDataType="i4"
+                      cachedName="CONTAINER_TYPE_ID"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_TYPE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[ITEM_ID]"
+                      cachedDataType="i4"
+                      cachedName="ITEM_ID"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[ITEM_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[VOYAGE_ID]"
+                      cachedDataType="i4"
+                      cachedName="VOYAGE_ID"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[VOYAGE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[CONSIGNOR_ID]"
+                      cachedDataType="i4"
+                      cachedName="CONSIGNOR_ID"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONSIGNOR_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[PORT_ID_FROM]"
+                      cachedDataType="i4"
+                      cachedName="PORT_ID_FROM"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_FROM]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[PORT_ID_TO]"
+                      cachedDataType="i4"
+                      cachedName="PORT_ID_TO"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_TO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIPMENT_DISTANCE]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_DISTANCE"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_DISTANCE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 6.Inputs[Sort Input].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      cachedDataType="i4"
+                      cachedName="SHIPMENT_NUMBER_CONTAINER"
+                      lineageId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_MAX_NUMBER_CONTAIN]"
+                      name="SHIP_MAX_NUMBER_CONTAIN">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_MAX_NUMBER_CONTAIN]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KNOTS]"
+                      name="SHIP_SPEED_IN_KNOTS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KNOTS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_SPEED_IN_KMH]"
+                      name="SHIP_SPEED_IN_KMH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_SPEED_IN_KMH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_YEAR_COST]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_YEAR_COST]"
+                      name="SHIP_YEAR_COST">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_YEAR_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIP_ID]"
+                      name="SHIP_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIP_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_ID]"
+                      name="SHIPMENT_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MAX_RANGE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MAX_RANGE]"
+                      name="CONTAINER_MAX_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MAX_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MIN_RANGE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_MIN_RANGE]"
+                      name="CONTAINER_MIN_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_MIN_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_TYPE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONTAINER_TYPE_ID]"
+                      name="CONTAINER_TYPE_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONTAINER_TYPE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[ITEM_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[ITEM_ID]"
+                      name="ITEM_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[ITEM_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[VOYAGE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[VOYAGE_ID]"
+                      name="VOYAGE_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[VOYAGE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONSIGNOR_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[CONSIGNOR_ID]"
+                      name="CONSIGNOR_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[CONSIGNOR_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_FROM]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_FROM]"
+                      name="PORT_ID_FROM">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_FROM]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_TO]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[PORT_ID_TO]"
+                      name="PORT_ID_TO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[PORT_ID_TO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_DISTANCE]"
+                      name="SHIPMENT_DISTANCE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_DISTANCE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 6.Outputs[Sort Output].Columns[SHIPMENT_NUMBER_CONTAINER]"
+                      name="SHIPMENT_NUMBER_CONTAINER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output].Columns[SHIPMENT_NUMBER_CONTAINER]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2778,6 +4245,11 @@
               name="Merge Join Output"
               startId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output2]"
+              endId="Package\Data Flow Task\Sort 6.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Merge Join 2.Outputs[Merge Join Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
@@ -2792,6 +4264,11 @@
               endId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\OLE DB Source 2.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output3]"
+              endId="Package\Data Flow Task\Sort 5.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source 3.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
               endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
@@ -2814,9 +4291,19 @@
               startId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output4]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Data Flow Task\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output5]"
+              endId="Package\Data Flow Task\Merge Join 2.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output6]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 6.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2911,37 +4398,53 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="532,588" />
-        <NodeLayout
           Size="107,42"
-          Id="Package\Data Flow Task\Sort 4"
-          TopLeft="557,484" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="321,157" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task\OLE DB Source 1"
-          TopLeft="546,64" />
+          Id="Package\Data Flow Task\Sort 2"
+          TopLeft="437,337" />
         <NodeLayout
           Size="159,42"
           Id="Package\Data Flow Task\OLE DB Source 2"
           TopLeft="630,272" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task\Merge Join 1"
-          TopLeft="537,416" />
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 5"
+          TopLeft="754,517" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\OLE DB Source 3"
+          TopLeft="774,433" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="321,157" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="642,761" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\OLE DB Source 1"
+          TopLeft="546,64" />
         <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 3"
           TopLeft="639,343" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="314,67" />
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 4"
+          TopLeft="555,503" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 6"
+          TopLeft="652,679" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Merge Join 2"
+          TopLeft="630,608" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Merge Join 1"
+          TopLeft="537,416" />
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Merge Join"
@@ -2951,23 +4454,69 @@
           Id="Package\Data Flow Task\Sort 1"
           TopLeft="575,155" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 2"
-          TopLeft="437,337" />
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="314,67" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="490.25,279">
+          Id="Package\Data Flow Task.Paths[Sort Output6]"
+          TopLeft="705.5,721">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="22,40"
               Start="0,0"
-              End="0,50.5">
+              End="22,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
+                  <mssgle:LineSegment
+                    End="18,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18,20"
+                    Point2="22,20"
+                    Point3="22,24" />
+                  <mssgle:LineSegment
+                    End="22,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output5]"
+          TopLeft="807.5,559">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-86.1666666666666,49"
+              Start="0,0"
+              End="-86.1666666666666,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0654338549075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0654338549075"
+                    Point2="0,29.0654338549075"
+                    Point3="-4,29.0654338549075" />
+                  <mssgle:LineSegment
+                    End="-82.1666666666666,29.0654338549075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.1666666666666,29.0654338549075"
+                    Point2="-86.1666666666666,29.0654338549075"
+                    Point3="-86.1666666666666,33.0654338549075" />
+                  <mssgle:LineSegment
+                    End="-86.1666666666666,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2978,18 +4527,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output4]"
-          TopLeft="614,526">
+          TopLeft="608.5,545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62"
+              EndConnector="91,63"
               Start="0,0"
-              End="0,54.5">
+              End="91,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="87,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="87,31.5"
+                    Point2="91,31.5"
+                    Point3="91,35.5" />
+                  <mssgle:LineSegment
+                    End="91,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3135,6 +4696,40 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
+          TopLeft="853.5,475">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46,42"
+              Start="0,0"
+              End="-46,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="-4,21" />
+                  <mssgle:LineSegment
+                    End="-42,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42,21"
+                    Point2="-46,21"
+                    Point3="-46,25" />
+                  <mssgle:LineSegment
+                    End="-46,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
           TopLeft="709.5,314">
           <EdgeLayout.Curve>
@@ -3225,19 +4820,63 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
-          TopLeft="608.5,458">
+          Id="Package\Data Flow Task.Paths[Merge Join Output2]"
+          TopLeft="702.5,650">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26"
+              EndConnector="0,29"
               Start="0,0"
-              End="0,18.5">
+              End="0,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
+          TopLeft="607.5,458">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="490.25,279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3276,6 +4915,19 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Source 2">
     <Properties>
       <Property>
@@ -3289,7 +4941,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\OLE DB Source 3">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

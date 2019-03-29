@@ -1,0 +1,65 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b1ec2737-4c0f-449f-9fa6-d31f440a49ff" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>s2126940 Project3</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FACT SHIPMENT</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3ef4b62f-d3e1-4430-83ee-5533d273a0e2">
+          <ID>FACT SHIPMENT</ID>
+          <Name>FACT SHIPMENT</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="fb29ac3a-89bf-4a8d-8781-3dade8babdd7">
+            <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+            <TableID>dbo_FACT_SHIPMENT</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT VOYAGE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e1e61f08-eb52-4fe8-a470-17c47c3c30af">
+          <ID>FACT VOYAGE</ID>
+          <Name>FACT VOYAGE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2593980b-429e-4d7b-8f0a-df33dd4b31be">
+            <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+            <TableID>dbo_FACT_VOYAGE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>DIM SHIP</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8cb6b7b4-a1ed-4f52-a764-79af6c04aeb9">
+          <ID>DIM SHIP</ID>
+          <Name>DIM SHIP</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f359a530-3b10-4af8-bb4d-0a6ef5d003cd">
+            <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+            <TableID>dbo_DIM_SHIP</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

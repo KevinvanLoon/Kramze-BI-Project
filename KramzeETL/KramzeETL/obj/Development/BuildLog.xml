@@ -2,33 +2,43 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>KramzeETL</Name>
-    <LastWriteTime>2019-03-27T13:34:50.3278598Z</LastWriteTime>
+    <LastWriteTime>2019-03-28T23:28:57.1699333Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SOURCES_TO_PSA.dtsx</Name>
-      <LastWriteTime>2019-03-27T14:19:12.2149382Z</LastWriteTime>
+      <LastWriteTime>2019-03-28T18:37:52.077701Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>TRANSFORM_PSA.dtsx</Name>
-      <LastWriteTime>2019-03-27T14:16:48.470535Z</LastWriteTime>
+      <LastWriteTime>2019-03-28T22:10:54.9351126Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>EXTRACT-TRANSFER-LOAD.dtsx</Name>
-      <LastWriteTime>2019-03-27T14:18:42.5650643Z</LastWriteTime>
+      <LastWriteTime>2019-03-28T18:42:31.7627279Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LOAD_DIM_TO_ODS.dtsx</Name>
-      <LastWriteTime>2019-03-27T14:43:02.4056419Z</LastWriteTime>
+      <LastWriteTime>2019-03-28T23:28:57.1499867Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LOAD_FACTS_TO_ODS.dtsx</Name>
-      <LastWriteTime>2019-03-27T14:38:35.4230429Z</LastWriteTime>
+      <LastWriteTime>2019-03-28T16:58:39.3505294Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>NEW_LOAD_ODS_DIM.dtsx</Name>
+      <LastWriteTime>2019-03-28T18:48:59.1706271Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>NEW_LOAD_ODS_FACTS.dtsx</Name>
+      <LastWriteTime>2019-03-29T00:39:41.2419588Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

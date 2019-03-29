@@ -1,0 +1,3286 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>yetanothercube</ID>
+  <Name>yetanothercube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>DIM PORT</ID>
+      <Name>DIM PORT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>PORT ID</ID>
+          <Name>PORT ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_PORT</TableID>
+                <ColumnID>PORT_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>PORT NAME</AttributeID>
+              <Name>PORT NAME</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>PORT COUNTRY</AttributeID>
+              <Name>PORT COUNTRY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+              <Name>PORT DISTANCE FROM OSLO</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+              <Name>PORT DISTANCE FROM PIRAEUS</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PORT NAME</ID>
+          <Name>PORT NAME</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_PORT</TableID>
+                <ColumnID>PORT_NAME</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PORT COUNTRY</ID>
+          <Name>PORT COUNTRY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_PORT</TableID>
+                <ColumnID>PORT_COUNTRY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PORT DISTANCE FROM OSLO</ID>
+          <Name>PORT DISTANCE FROM OSLO</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_PORT</TableID>
+                <ColumnID>PORT_DISTANCE_FROM_OSLO</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PORT DISTANCE FROM PIRAEUS</ID>
+          <Name>PORT DISTANCE FROM PIRAEUS</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_PORT</TableID>
+                <ColumnID>PORT_DISTANCE_FROM_PIRAEUS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM SHIP</ID>
+      <Name>DIM SHIP</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>SHIP ID</ID>
+          <Name>SHIP ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>SHIP NAME</AttributeID>
+              <Name>SHIP NAME</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>SHIP MAX CONTAINER</AttributeID>
+              <Name>SHIP MAX CONTAINER</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>SHIP SPEED IN KNOTS</AttributeID>
+              <Name>SHIP SPEED IN KNOTS</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>SHIP SPEED IN KMH</AttributeID>
+              <Name>SHIP SPEED IN KMH</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>SHIP COUNTRY</AttributeID>
+              <Name>SHIP COUNTRY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>SHIP COST PER YEAR</AttributeID>
+              <Name>SHIP COST PER YEAR</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP NAME</ID>
+          <Name>SHIP NAME</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_NAME</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP MAX CONTAINER</ID>
+          <Name>SHIP MAX CONTAINER</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_MAX_CONTAINER</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP SPEED IN KNOTS</ID>
+          <Name>SHIP SPEED IN KNOTS</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_SPEED_IN_KNOTS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP SPEED IN KMH</ID>
+          <Name>SHIP SPEED IN KMH</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_SPEED_IN_KMH</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP COUNTRY</ID>
+          <Name>SHIP COUNTRY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_COUNTRY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>SHIP COST PER YEAR</ID>
+          <Name>SHIP COST PER YEAR</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_SHIP</TableID>
+                <ColumnID>SHIP_COST_PER_YEAR</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM CALENDAR</ID>
+      <Name>DIM CALENDAR</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2634" scrolltop="-8004" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8308" y="19156" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CALENDAR" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_CALENDAR" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-2634</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-8004</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <Type>Time</Type>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>DATE ID</ID>
+          <Name>DATE ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CALENDAR</TableID>
+                <ColumnID>DATE_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>DATE</AttributeID>
+              <Name>DATE</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>DAY</AttributeID>
+              <Name>DAY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>MONTH</AttributeID>
+              <Name>MONTH</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>YEAR</AttributeID>
+              <Name>YEAR</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>DATE</ID>
+          <Name>DATE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CALENDAR</TableID>
+                <ColumnID>DATE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>DAY</ID>
+          <Name>DAY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CALENDAR</TableID>
+                <ColumnID>DAY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>MONTH</ID>
+          <Name>MONTH</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CALENDAR</TableID>
+                <ColumnID>MONTH</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>YEAR</ID>
+          <Name>YEAR</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CALENDAR</TableID>
+                <ColumnID>YEAR</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM ITEM</ID>
+      <Name>DIM ITEM</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>ITEM ID</ID>
+          <Name>ITEM ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>ITEM DESCRIPTION</AttributeID>
+              <Name>ITEM DESCRIPTION</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>ITEM CATEGORY</AttributeID>
+              <Name>ITEM CATEGORY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>ITEM MANUFACTURER</AttributeID>
+              <Name>ITEM MANUFACTURER</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>ITEM STORAGE TYPE</AttributeID>
+              <Name>ITEM STORAGE TYPE</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>ITEM HAZARD FLAG</AttributeID>
+              <Name>ITEM HAZARD FLAG</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ITEM DESCRIPTION</ID>
+          <Name>ITEM DESCRIPTION</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_DESCRIPTION</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ITEM CATEGORY</ID>
+          <Name>ITEM CATEGORY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_CATEGORY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ITEM MANUFACTURER</ID>
+          <Name>ITEM MANUFACTURER</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_MANUFACTURER</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ITEM STORAGE TYPE</ID>
+          <Name>ITEM STORAGE TYPE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_STORAGE_TYPE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ITEM HAZARD FLAG</ID>
+          <Name>ITEM HAZARD FLAG</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_ITEM</TableID>
+                <ColumnID>ITEM_HAZARD_FLAG</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM CONTAINER</ID>
+      <Name>DIM CONTAINER</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>CONTAINER ID</ID>
+          <Name>CONTAINER ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER TYPE</AttributeID>
+              <Name>CONTAINER TYPE</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER REFRIGERATION FLAG</AttributeID>
+              <Name>CONTAINER REFRIGERATION FLAG</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER POWER FLAG</AttributeID>
+              <Name>CONTAINER POWER FLAG</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER LENGTH</AttributeID>
+              <Name>CONTAINER LENGTH</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER CUBES</AttributeID>
+              <Name>CONTAINER CUBES</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONTAINER EUROPRICE PER KM</AttributeID>
+              <Name>CONTAINER EUROPRICE PER KM</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER TYPE</ID>
+          <Name>CONTAINER TYPE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_TYPE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER REFRIGERATION FLAG</ID>
+          <Name>CONTAINER REFRIGERATION FLAG</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_REFRIGERATION_FLAG</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER POWER FLAG</ID>
+          <Name>CONTAINER POWER FLAG</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_POWER_FLAG</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER LENGTH</ID>
+          <Name>CONTAINER LENGTH</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_LENGTH</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER CUBES</ID>
+          <Name>CONTAINER CUBES</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_CUBES</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONTAINER EUROPRICE PER KM</ID>
+          <Name>CONTAINER EUROPRICE PER KM</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONTAINER</TableID>
+                <ColumnID>CONTAINER_EUROPRICE_PER_KM</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM CONSIGNOR</ID>
+      <Name>DIM CONSIGNOR</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>CONSIGNOR ID</ID>
+          <Name>CONSIGNOR ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONSIGNOR</TableID>
+                <ColumnID>CONSIGNOR_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>CONSIGNOR NAME</AttributeID>
+              <Name>CONSIGNOR NAME</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONSIGNOR CITY</AttributeID>
+              <Name>CONSIGNOR CITY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONSIGNOR COUNTRY</AttributeID>
+              <Name>CONSIGNOR COUNTRY</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CONSIGNOR DISCOUNT</AttributeID>
+              <Name>CONSIGNOR DISCOUNT</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONSIGNOR NAME</ID>
+          <Name>CONSIGNOR NAME</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONSIGNOR</TableID>
+                <ColumnID>CONSIGNOR_NAME</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONSIGNOR CITY</ID>
+          <Name>CONSIGNOR CITY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONSIGNOR</TableID>
+                <ColumnID>CONSIGNOR_CITY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONSIGNOR COUNTRY</ID>
+          <Name>CONSIGNOR COUNTRY</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONSIGNOR</TableID>
+                <ColumnID>CONSIGNOR_COUNTRY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CONSIGNOR DISCOUNT</ID>
+          <Name>CONSIGNOR DISCOUNT</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_CONSIGNOR</TableID>
+                <ColumnID>CONSIGNOR_DISCOUNT</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>s2126940 Project3</ID>
+      <Name>s2126940 Project3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="46" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4493" scrolltop="-1508" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="18574" y="17436" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CONTAINER" left="17256" top="6474" logicalid="23" controlid="1" masterid="0" hint1="0" hint2="0" width="6244" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000641800009b0f0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_CONTAINER" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CONSIGNOR" left="9339" top="13372" logicalid="24" controlid="2" masterid="0" hint1="0" hint2="0" width="5742" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00006e1600004d0c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_CONSIGNOR" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_SHIPMENT" left="8400" top="5972" logicalid="25" controlid="3" masterid="0" hint1="0" hint2="0" width="6950" height="6270" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000261b00007e180000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_FACT_SHIPMENT" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ITEM" left="9405" top="0" logicalid="26" controlid="4" masterid="0" hint1="0" hint2="0" width="4445" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00005d110000f40d0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_ITEM" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_VOYAGE" left="9035" top="18921" logicalid="27" controlid="5" masterid="0" hint1="0" hint2="0" width="6896" height="9162" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000f01a0000ca230000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_FACT_VOYAGE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_SHIP" left="1358" top="27168" logicalid="28" controlid="6" masterid="0" hint1="0" hint2="0" width="5459" height="4595" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e000053150000f3110000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_SHIP" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CALENDAR" left="16885" top="19846" logicalid="29" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_CALENDAR" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_PORT" left="20" top="6897" logicalid="30" controlid="8" masterid="0" hint1="0" hint2="0" width="5980" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00005c1700004d0c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_PORT" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="5700" top="7522" logicalid="31" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_PORT1]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="3" sourceattachpoint="25" destattachpoint="32" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="6000" y="7921" />
+                  <point x="7200" y="7921" />
+                  <point x="7200" y="8007" />
+                  <point x="8400" y="8007" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="15050" top="6422" logicalid="32" controlid="10" masterid="0" hint1="0" hint2="0" width="2506" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_CONTAINER]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="22" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="17256" y="6821" />
+                  <point x="16303" y="6821" />
+                  <point x="16303" y="6907" />
+                  <point x="15350" y="6907" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="5700" top="6972" logicalid="33" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_PORT]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="3" sourceattachpoint="23" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="6000" y="7371" />
+                  <point x="7200" y="7371" />
+                  <point x="7200" y="7457" />
+                  <point x="8400" y="7457" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="9578" top="3073" logicalid="34" controlid="12" masterid="0" hint1="0" hint2="0" width="947" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_ITEM]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="3" sourceattachpoint="1" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="9977" y="3572" />
+                  <point x="9977" y="4772" />
+                  <point x="10225" y="4772" />
+                  <point x="10225" y="5972" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="9061" top="11942" logicalid="35" controlid="13" masterid="0" hint1="0" hint2="0" width="914" height="1930" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_CONSIGNOR]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="9460" y="13372" />
+                  <point x="9460" y="12807" />
+                  <point x="9675" y="12807" />
+                  <point x="9675" y="12242" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="15631" top="21552" logicalid="36" controlid="14" masterid="0" hint1="0" hint2="0" width="1554" height="818" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR2]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="16" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="16885" y="21970" />
+                  <point x="16408" y="21970" />
+                  <point x="16408" y="21852" />
+                  <point x="15931" y="21852" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="5361" top="9547" logicalid="37" controlid="15" masterid="0" hint1="0" hint2="0" width="6322" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="21" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="5760" y="10046" />
+                  <point x="5760" y="14483" />
+                  <point x="11383" y="14483" />
+                  <point x="11383" y="18921" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="6517" top="27416" logicalid="38" controlid="16" masterid="0" hint1="0" hint2="0" width="2818" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_SHIP]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="19" destattachpoint="58" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="6817" y="27815" />
+                  <point x="7926" y="27815" />
+                  <point x="7926" y="27902" />
+                  <point x="9035" y="27902" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="15631" top="21002" logicalid="39" controlid="17" masterid="0" hint1="0" hint2="0" width="1554" height="818" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR3]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="14" destattachpoint="35" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="16885" y="21420" />
+                  <point x="16408" y="21420" />
+                  <point x="16408" y="21302" />
+                  <point x="15931" y="21302" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="4811" top="9547" logicalid="40" controlid="18" masterid="0" hint1="0" hint2="0" width="6322" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT2]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="19" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="5210" y="10046" />
+                  <point x="5210" y="14483" />
+                  <point x="10833" y="14483" />
+                  <point x="10833" y="18921" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="15631" top="20452" logicalid="41" controlid="19" masterid="0" hint1="0" hint2="0" width="1554" height="818" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="12" destattachpoint="33" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="16885" y="20870" />
+                  <point x="16408" y="20870" />
+                  <point x="16408" y="20752" />
+                  <point x="15931" y="20752" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="4261" top="9547" logicalid="42" controlid="20" masterid="0" hint1="0" hint2="0" width="6322" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT31]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="17" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="4660" y="10046" />
+                  <point x="4660" y="14483" />
+                  <point x="10283" y="14483" />
+                  <point x="10283" y="18921" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="3711" top="9547" logicalid="43" controlid="21" masterid="0" hint1="0" hint2="0" width="6322" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT11]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="15" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="4110" y="10046" />
+                  <point x="4110" y="14483" />
+                  <point x="9733" y="14483" />
+                  <point x="9733" y="18921" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="15631" top="19352" logicalid="44" controlid="22" masterid="0" hint1="0" hint2="0" width="1554" height="1368" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR11]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="10" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="16885" y="20320" />
+                  <point x="16408" y="20320" />
+                  <point x="16408" y="19652" />
+                  <point x="15931" y="19652" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-4493</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-1508</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>75</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>PORT ID TO</ID>
+          <Name>PORT ID TO</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM CONTAINER</ID>
+          <Name>DIM CONTAINER</Name>
+          <DimensionID>DIM CONTAINER</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>CONTAINER ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER TYPE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER REFRIGERATION FLAG</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER POWER FLAG</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER LENGTH</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER CUBES</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONTAINER EUROPRICE PER KM</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>PORT ID FROM</ID>
+          <Name>PORT ID FROM</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM ITEM</ID>
+          <Name>DIM ITEM</Name>
+          <DimensionID>DIM ITEM</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>ITEM ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ITEM DESCRIPTION</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ITEM CATEGORY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ITEM MANUFACTURER</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ITEM STORAGE TYPE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ITEM HAZARD FLAG</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM CONSIGNOR</ID>
+          <Name>DIM CONSIGNOR</Name>
+          <DimensionID>DIM CONSIGNOR</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>CONSIGNOR ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONSIGNOR NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONSIGNOR CITY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONSIGNOR COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CONSIGNOR DISCOUNT</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>VOYAGE PORT ID END</ID>
+          <Name>VOYAGE PORT ID END</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>VOYAGE DATE DEPARTMENT</ID>
+          <Name>VOYAGE DATE DEPARTMENT</Name>
+          <DimensionID>DIM CALENDAR</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>DATE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DATE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DAY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>MONTH</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>YEAR</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>PORT CURRENT</ID>
+          <Name>PORT CURRENT</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>PORT NEXT</ID>
+          <Name>PORT NEXT</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM SHIP</ID>
+          <Name>DIM SHIP</Name>
+          <DimensionID>DIM SHIP</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>SHIP ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP MAX CONTAINER</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP SPEED IN KNOTS</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP SPEED IN KMH</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>SHIP COST PER YEAR</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>PORT DEPARTURE DATE</ID>
+          <Name>PORT DEPARTURE DATE</Name>
+          <DimensionID>DIM CALENDAR</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>DATE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DATE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DAY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>MONTH</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>YEAR</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>PORT ARRIVAL DATE</ID>
+          <Name>PORT ARRIVAL DATE</Name>
+          <DimensionID>DIM CALENDAR</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>DATE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DATE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DAY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>MONTH</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>YEAR</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>VOYAGE PORT ID START</ID>
+          <Name>VOYAGE PORT ID START</Name>
+          <DimensionID>DIM PORT</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PORT ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT NAME</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT COUNTRY</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>FACT SHIPMENT</ID>
+          <Name>FACT SHIPMENT</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>SHIPMENT DISTANCE</ID>
+              <Name>SHIPMENT DISTANCE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_SHIPMENT</TableID>
+                  <ColumnID>ROW_ID</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIPMENT CONTAINER MIN RANGE</ID>
+              <Name>SHIPMENT CONTAINER MIN RANGE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_SHIPMENT</TableID>
+                  <ColumnID>SHIPMENT_CONTAINER_MIN_RANGE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIPMENT CONTAINER MAX RANGE</ID>
+              <Name>SHIPMENT CONTAINER MAX RANGE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_SHIPMENT</TableID>
+                  <ColumnID>SHIPMENT_CONTAINER_MAX_RANGE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIPMENT CONTAINER AMOUNT</ID>
+              <Name>SHIPMENT CONTAINER AMOUNT</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_SHIPMENT</TableID>
+                  <ColumnID>SHIPMENT_CONTAINER_AMOUNT</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>FACT SHIPMENT Count</ID>
+              <Name>FACT SHIPMENT Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FACT_SHIPMENT</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT ID TO</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>PORT_ID_TO</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM CONTAINER</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>CONTAINER ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>CONTAINER_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT ID FROM</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>PORT_ID_FROM</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM ITEM</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ITEM ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>ITEM_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM CONSIGNOR</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>CONSIGNOR ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>CONSIGNOR_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT CURRENT</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>PORT_ID_FROM</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT NEXT</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_SHIPMENT</TableID>
+                        <ColumnID>PORT_ID_TO</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>FACT SHIPMENT</ID>
+              <Name>FACT SHIPMENT</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+                <TableID>dbo_FACT_SHIPMENT</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+        <MeasureGroup>
+          <ID>FACT VOYAGE</ID>
+          <Name>FACT VOYAGE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>VOYAGE TRAJECT DISTANCE</ID>
+              <Name>VOYAGE TRAJECT DISTANCE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>VOYAGE_TRAJECT_DISTANCE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>FACT VOYAGE Count</ID>
+              <Name>FACT VOYAGE Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIP ID</ID>
+              <Name>SHIP ID COUNT</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>VOYAGE DATE DEPARTMENT</ID>
+              <Name>VOYAGE DATE DEPARTMENT</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>VOYAGE_DATE_DEPARTMENT</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>PORT ARRIVAL DATE</ID>
+              <Name>PORT ARRIVAL DATE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>PORT_ARRIVAL_DATE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>PORT DEPARTURE DATE</ID>
+              <Name>PORT DEPARTURE DATE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>PORT_DEPARTURE_DATE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>TOTAL DAYS VOYAGE</ID>
+              <Name>TOTAL DAYS VOYAGE</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>TOTAL_DAYS_VOYAGE</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>IDLE DAYS</ID>
+              <Name>IDLE DAYS</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>IDLE_DAYS</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>VOYAGE ID</ID>
+              <Name>VOYAGE ID</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT_VOYAGE</TableID>
+                  <ColumnID>VOYAGE_ID</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>VOYAGE PORT ID END</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>VOYAGE_PORT_ID_END</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>VOYAGE DATE DEPARTMENT</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>DATE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>VOYAGE_DATE_DEPARTMENT</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT CURRENT</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>PORT_CURRENT</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT NEXT</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>PORT_NEXT</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM SHIP</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>SHIP ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>SHIP_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT DEPARTURE DATE</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>DATE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>PORT_DEPARTURE_DATE</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT ARRIVAL DATE</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>DATE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>PORT_ARRIVAL_DATE</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>VOYAGE PORT ID START</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>VOYAGE_PORT_ID_START</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT ID FROM</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>VOYAGE_PORT_ID_START</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>PORT ID TO</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PORT ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT_VOYAGE</TableID>
+                        <ColumnID>VOYAGE_PORT_ID_END</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>FACT VOYAGE</ID>
+              <Name>FACT VOYAGE</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+                <TableID>dbo_FACT_VOYAGE</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+        <MeasureGroup>
+          <ID>DIM SHIP</ID>
+          <Name>DIM SHIP</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>SHIP SPEED IN KMH</ID>
+              <Name>SHIP SPEED IN KMH</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_DIM_SHIP</TableID>
+                  <ColumnID>SHIP_SPEED_IN_KMH</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIP MAX CONTAINER</ID>
+              <Name>SHIP MAX CONTAINER</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_DIM_SHIP</TableID>
+                  <ColumnID>SHIP_MAX_CONTAINER</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>SHIP COST PER YEAR</ID>
+              <Name>SHIP COST PER YEAR</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_DIM_SHIP</TableID>
+                  <ColumnID>SHIP_COST_PER_YEAR</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="DegenerateMeasureGroupDimension">
+              <CubeDimensionID>DIM SHIP</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>SHIP ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_DIM_SHIP</TableID>
+                        <ColumnID>SHIP_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>DIM SHIP</ID>
+              <Name>DIM SHIP</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+                <TableID>dbo_DIM_SHIP</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+      </Source>
+      <MdxScripts>
+        <MdxScript>
+          <ID>MdxScript</ID>
+          <Name>MdxScript</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Commands>
+            <Command>
+              <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;    
+CREATE MEMBER CURRENTCUBE.[Measures].ShipmentContainers
+ AS ([Measures].[SHIPMENT CONTAINER AMOUNT]/[Measures].[FACT SHIPMENT Count])*2, 
+FORMAT_STRING = "#", 
+VISIBLE = 1;      
+CREATE MEMBER CURRENTCUBE.[Measures].LastMonthFuelUsage
+ AS ([PORT DEPARTURE DATE].[MONTH].CURRENTMEMBER.PREVMEMBER,[Measures].[FuelUsageInTons]), 
+FORMAT_STRING = "#,#", 
+VISIBLE = 1;     
+CREATE MEMBER CURRENTCUBE.[Measures].FuelUsageGrowthPerMonth
+ AS ([Measures].[FuelUsageInTons]-[Measures].[LastMonthFuelUsage])/[Measures].[LastMonthFuelUsage], 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;        
+CREATE MEMBER CURRENTCUBE.[Measures].LoadFacter
+ AS [Measures].[ShipmentContainers]/[Measures].[SHIP MAX CONTAINER], 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;        
+CREATE MEMBER CURRENTCUBE.[Measures].FuelUsageInTons
+ AS ([Measures].[VOYAGE TRAJECT DISTANCE]/[Measures].[SHIP SPEED IN KMH])*10400, 
+FORMAT_STRING = "#,#", 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].IdleTimePercentage
+ AS IIF(
+[Measures].[TOTAL DAYS VOYAGE] &gt; 0,
+[Measures].[IDLE DAYS]/[Measures].[TOTAL DAYS VOYAGE],
+null
+), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1  ; </Text>
+            </Command>
+          </Commands>
+        </MdxScript>
+      </MdxScripts>
+      <Kpis>
+        <Kpi>
+          <ID>KPI</ID>
+          <Name>Idle Time KPI</Name>
+          <AssociatedMeasureGroupID>FACT VOYAGE</AssociatedMeasureGroupID>
+          <Value>[Measures].[IdleTimePercentage]</Value>
+          <Goal>0.05</Goal>
+          <Status>CASE
+WHEN [Measures].[IDLE DAYS]/[Measures].[TOTAL DAYS VOYAGE] &lt;= 0.05 THEN 1
+WHEN [Measures].[IDLE DAYS]/[Measures].[TOTAL DAYS VOYAGE] &gt; 0.05 THEN -1
+END
+</Status>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Traffic Light</StatusGraphic>
+        </Kpi>
+        <Kpi>
+          <ID>KPI 1</ID>
+          <Name>Fuel Usage Decrease KPI</Name>
+          <AssociatedMeasureGroupID>FACT VOYAGE</AssociatedMeasureGroupID>
+          <Value>[Measures].[FuelUsageGrowthPerMonth]</Value>
+          <Goal>-0.10</Goal>
+          <Status>CASE
+WHEN [Measures].[FuelUsageGrowthPerMonth] &lt;= -0.10 THEN 1
+WHEN [Measures].[FuelUsageGrowthPerMonth] &gt; -0.10THEN -1
+END</Status>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Traffic Light</StatusGraphic>
+        </Kpi>
+        <Kpi>
+          <ID>KPI 2</ID>
+          <Name>Load Factor KPI</Name>
+          <AssociatedMeasureGroupID>FACT SHIPMENT</AssociatedMeasureGroupID>
+          <Value>[Measures].[LoadFacter]</Value>
+          <Goal>0.9</Goal>
+          <Status>CASE
+WHEN [Measures].[LoadFacter] &lt; 0.9 THEN -1
+WHEN [Measures].[LoadFacter] &gt;= 0.9THEN 1
+END</Status>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Traffic Light</StatusGraphic>
+        </Kpi>
+      </Kpis>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>s2126940 Project3</ID>
+      <Name>goodsource</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLNCLI11.1;Data Source=AEI-SQL.AVANS.NL\STUDENTEN,1443;Persist Security Info=True;Password=;User ID=;Initial Catalog=s2126940_Project3</ConnectionString>
+      <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>Default</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>s2126940 Project3</ID>
+      <Name>s2126940 Project3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout>
+                  <dds>
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="58" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3472" scrolltop="1806" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23178" y="20479" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                      <font>
+                        <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                      </font>
+                      <mouseicon>
+                        <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                      </mouseicon>
+                    </diagram>
+                    <layoutmanager>
+                      <ddsxmlobj />
+                    </layoutmanager>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_PORT" left="0" top="6897" logicalid="22" controlid="1" masterid="0" hint1="0" hint2="0" width="5980" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00005c1700004d0c0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_PORT" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_SHIP" left="9451" top="26321" logicalid="23" controlid="2" masterid="0" hint1="0" hint2="0" width="4577" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000e11100009b0f0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_SHIP" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CALENDAR" left="16865" top="19846" logicalid="24" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_CALENDAR" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_VOYAGE" left="9015" top="18921" logicalid="25" controlid="4" masterid="0" hint1="0" hint2="0" width="5450" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00004a15000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_FACT_VOYAGE" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_SHIPMENT" left="8380" top="5972" logicalid="26" controlid="5" masterid="0" hint1="0" hint2="0" width="6456" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00003819000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_FACT_SHIPMENT" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ITEM" left="9385" top="0" logicalid="27" controlid="6" masterid="0" hint1="0" hint2="0" width="4445" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00005d110000f40d0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_ITEM" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CONTAINER" left="17236" top="6474" logicalid="28" controlid="7" masterid="0" hint1="0" hint2="0" width="6244" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000641800009b0f0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_CONTAINER" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_CONSIGNOR" left="9319" top="13372" logicalid="29" controlid="8" masterid="0" hint1="0" hint2="0" width="4577" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000e11100004d0c0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_CONSIGNOR" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="5680" top="7522" logicalid="44" controlid="23" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_PORT1]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="25" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="5980" y="7921" />
+                        <point x="7180" y="7921" />
+                        <point x="7180" y="7922" />
+                        <point x="8380" y="7922" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="14536" top="6422" logicalid="45" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_CONTAINER]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="22" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="17236" y="6821" />
+                        <point x="16036" y="6821" />
+                        <point x="16036" y="6822" />
+                        <point x="14836" y="6822" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="5680" top="6972" logicalid="46" controlid="25" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_PORT]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="23" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="5980" y="7371" />
+                        <point x="7180" y="7371" />
+                        <point x="7180" y="7372" />
+                        <point x="8380" y="7372" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="9558" top="3073" logicalid="47" controlid="26" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_ITEM]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="1" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="9957" y="3572" />
+                        <point x="9957" y="4772" />
+                        <point x="9958" y="4772" />
+                        <point x="9958" y="5972" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="9558" top="10672" logicalid="48" controlid="27" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_SHIPMENT_DIM_CONSIGNOR]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="9957" y="13372" />
+                        <point x="9957" y="12172" />
+                        <point x="9958" y="12172" />
+                        <point x="9958" y="10972" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="14165" top="21571" logicalid="49" controlid="28" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="16" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="16865" y="21970" />
+                        <point x="15665" y="21970" />
+                        <point x="15665" y="21971" />
+                        <point x="14465" y="21971" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4791" top="9547" logicalid="50" controlid="29" masterid="0" hint1="0" hint2="0" width="6699" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT31]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="19" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="5190" y="10046" />
+                        <point x="5190" y="14483" />
+                        <point x="11190" y="14483" />
+                        <point x="11190" y="18921" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="14165" top="21021" logicalid="51" controlid="30" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR2]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="14" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="16865" y="21420" />
+                        <point x="15665" y="21420" />
+                        <point x="15665" y="21421" />
+                        <point x="14465" y="21421" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4241" top="9547" logicalid="52" controlid="31" masterid="0" hint1="0" hint2="0" width="6699" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT11]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="17" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="4640" y="10046" />
+                        <point x="4640" y="14483" />
+                        <point x="10640" y="14483" />
+                        <point x="10640" y="18921" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="3691" top="9547" logicalid="53" controlid="32" masterid="0" hint1="0" hint2="0" width="6699" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="15" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="4090" y="10046" />
+                        <point x="4090" y="14483" />
+                        <point x="10090" y="14483" />
+                        <point x="10090" y="18921" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="9690" top="23621" logicalid="54" controlid="33" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_SHIP]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="0" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="10089" y="26321" />
+                        <point x="10089" y="25121" />
+                        <point x="10090" y="25121" />
+                        <point x="10090" y="23921" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="14165" top="20471" logicalid="55" controlid="34" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR11]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="12" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="16865" y="20870" />
+                        <point x="15665" y="20870" />
+                        <point x="15665" y="20871" />
+                        <point x="14465" y="20871" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="14165" top="19921" logicalid="56" controlid="35" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_CALENDAR3]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="10" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="16865" y="20320" />
+                        <point x="15665" y="20320" />
+                        <point x="15665" y="20321" />
+                        <point x="14465" y="20321" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="5341" top="9547" logicalid="57" controlid="36" masterid="0" hint1="0" hint2="0" width="4499" height="9674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[FK_FACT_VOYAGE_DIM_PORT2]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="21" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="5740" y="10046" />
+                        <point x="5740" y="14483" />
+                        <point x="9540" y="14483" />
+                        <point x="9540" y="18921" />
+                      </connector>
+                    </ddscontrol>
+                  </dds>
+                </DiagramLayout>
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>-3472</DiagramViewPortLeft>
+                <DiagramViewPortTop>1806</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>75</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>s2126940 Project3</DataSourceID>
+      <Schema>
+        <xs:schema id="s2126940_x0020_Project3" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="s2126940_x0020_Project3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ccba440e-8b21-4b47-b154-3e9cedfbfb97">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_DIM_PORT" msprop:design-time-name="53869212-917e-4e75-bd09-27dd8e8b80ef" msprop:FriendlyName="DIM_PORT" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_PORT" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="PORT_ID" msprop:design-time-name="23fc0749-fcc1-4320-8943-e02bda6ead22" msprop:DbColumnName="PORT_ID" msprop:FriendlyName="PORT_ID" type="xs:int" />
+                      <xs:element name="PORT_NAME" msprop:design-time-name="c598efd9-94cd-47e0-a7b3-e5fb9e6c063a" msprop:DbColumnName="PORT_NAME" msprop:FriendlyName="PORT_NAME">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="PORT_COUNTRY" msprop:design-time-name="d1dd5fc1-dea7-484d-880a-00a14755ef42" msprop:DbColumnName="PORT_COUNTRY" msprop:FriendlyName="PORT_COUNTRY">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="PORT_DISTANCE_FROM_OSLO" msprop:design-time-name="7c9f4576-4c34-4db1-91d6-f205d40ead89" msprop:DbColumnName="PORT_DISTANCE_FROM_OSLO" msprop:FriendlyName="PORT_DISTANCE_FROM_OSLO" type="xs:int" />
+                      <xs:element name="PORT_DISTANCE_FROM_PIRAEUS" msprop:design-time-name="741171f9-5669-4c09-a511-83f31cfe4b67" msprop:DbColumnName="PORT_DISTANCE_FROM_PIRAEUS" msprop:FriendlyName="PORT_DISTANCE_FROM_PIRAEUS" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_SHIP" msprop:design-time-name="97b27367-7bd7-493b-8821-079aca6719bf" msprop:FriendlyName="DIM_SHIP" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_SHIP" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="SHIP_ID" msprop:design-time-name="0a5cb7c4-d743-4f0b-84e8-b54f054a31f5" msprop:DbColumnName="SHIP_ID" msprop:FriendlyName="SHIP_ID" type="xs:int" />
+                      <xs:element name="SHIP_NAME" msprop:design-time-name="e04878a8-1509-4527-a3cd-d20890337b52" msprop:DbColumnName="SHIP_NAME" msprop:FriendlyName="SHIP_NAME" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="SHIP_MAX_CONTAINER" msprop:design-time-name="c471bf19-1c83-487f-ba44-f18c881fa031" msprop:DbColumnName="SHIP_MAX_CONTAINER" msprop:FriendlyName="SHIP_MAX_CONTAINER" type="xs:int" minOccurs="0" />
+                      <xs:element name="SHIP_SPEED_IN_KNOTS" msprop:design-time-name="c3eed737-22be-4d88-8fef-ee501214d2ff" msprop:DbColumnName="SHIP_SPEED_IN_KNOTS" msprop:FriendlyName="SHIP_SPEED_IN_KNOTS" type="xs:int" minOccurs="0" />
+                      <xs:element name="SHIP_SPEED_IN_KMH" msprop:design-time-name="fca819f9-05ee-4d4f-8ccc-20e938259e40" msprop:DbColumnName="SHIP_SPEED_IN_KMH" msprop:FriendlyName="SHIP_SPEED_IN_KMH" type="xs:int" minOccurs="0" />
+                      <xs:element name="SHIP_COUNTRY" msprop:design-time-name="53a948ec-534f-478b-94a6-42333b9bc2c7" msprop:DbColumnName="SHIP_COUNTRY" msprop:FriendlyName="SHIP_COUNTRY" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="SHIP_COST_PER_YEAR" msprop:design-time-name="779e71b7-665b-4729-9ccb-cd58a8ad1d95" msprop:DbColumnName="SHIP_COST_PER_YEAR" msprop:FriendlyName="SHIP_COST_PER_YEAR" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_CALENDAR" msprop:design-time-name="a9cf85e4-31c6-423e-ae6b-ee2329bc33d5" msprop:FriendlyName="DIM_CALENDAR" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_CALENDAR" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="DATE_ID" msprop:design-time-name="4cd05d75-9ccb-487a-839d-f242adbb9f52" msprop:DbColumnName="DATE_ID" msprop:FriendlyName="DATE_ID" type="xs:int" />
+                      <xs:element name="DATE" msprop:design-time-name="6234201b-e242-42c2-95b3-0e4b8608cdd4" msprop:DbColumnName="DATE" msprop:FriendlyName="DATE" type="xs:dateTime" />
+                      <xs:element name="DAY" msprop:design-time-name="0394cd0f-f241-4fab-a564-eadd04c023a6" msprop:DbColumnName="DAY" msprop:FriendlyName="DAY" type="xs:int" />
+                      <xs:element name="MONTH" msprop:design-time-name="aab42580-7bfa-46ec-9a5a-90e46ba6958c" msprop:DbColumnName="MONTH" msprop:FriendlyName="MONTH" type="xs:int" />
+                      <xs:element name="YEAR" msprop:design-time-name="4abcaa4e-82b5-4fc2-9f6a-b71fa753a6bf" msprop:DbColumnName="YEAR" msprop:FriendlyName="YEAR" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_FACT_VOYAGE" msprop:design-time-name="85daf59f-58e2-4785-9417-15957404d802" msprop:FriendlyName="FACT_VOYAGE" msprop:DbSchemaName="dbo" msprop:DbTableName="FACT_VOYAGE" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ROW_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="b405596e-fc78-47f5-b75e-51d26780dc9a" msprop:DbColumnName="ROW_ID" msprop:FriendlyName="ROW_ID" type="xs:int" />
+                      <xs:element name="VOYAGE_ID" msprop:design-time-name="9b7d5b14-9650-419a-b714-0982dcd22e66" msprop:DbColumnName="VOYAGE_ID" msprop:FriendlyName="VOYAGE_ID" type="xs:int" />
+                      <xs:element name="SHIP_ID" msprop:design-time-name="daf6755e-82f3-41f0-b2c9-e532a5339e49" msprop:DbColumnName="SHIP_ID" msprop:FriendlyName="SHIP_ID" type="xs:int" />
+                      <xs:element name="VOYAGE_DATE_DEPARTMENT" msprop:design-time-name="098cb61e-5646-48e6-828c-ce0d5eb1165f" msprop:DbColumnName="VOYAGE_DATE_DEPARTMENT" msprop:FriendlyName="VOYAGE_DATE_DEPARTMENT" type="xs:int" />
+                      <xs:element name="VOYAGE_PORT_ID_START" msprop:design-time-name="1225f990-b19b-4b96-bc31-328800ef7246" msprop:DbColumnName="VOYAGE_PORT_ID_START" msprop:FriendlyName="VOYAGE_PORT_ID_START" type="xs:int" />
+                      <xs:element name="VOYAGE_PORT_ID_END" msprop:design-time-name="7018669c-ee40-4813-822b-effcdef68bc0" msprop:DbColumnName="VOYAGE_PORT_ID_END" msprop:FriendlyName="VOYAGE_PORT_ID_END" type="xs:int" />
+                      <xs:element name="EXTRACTION_DATE" msprop:design-time-name="a90e77ea-8e65-4d8b-9174-e6af6b38a084" msprop:DbColumnName="EXTRACTION_DATE" msprop:FriendlyName="EXTRACTION_DATE" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="PORT_CURRENT" msprop:design-time-name="cdf5175f-275b-4b8c-9351-b4f47a0f1907" msprop:DbColumnName="PORT_CURRENT" msprop:FriendlyName="PORT_CURRENT" type="xs:int" minOccurs="0" />
+                      <xs:element name="PORT_NEXT" msprop:design-time-name="3953dbd4-3df9-4cf7-b30e-70336aa65895" msprop:DbColumnName="PORT_NEXT" msprop:FriendlyName="PORT_NEXT" type="xs:int" minOccurs="0" />
+                      <xs:element name="PORT_ARRIVAL_DATE" msprop:design-time-name="62983ba3-1e12-42ba-a702-a81e58ea4c43" msprop:DbColumnName="PORT_ARRIVAL_DATE" msprop:FriendlyName="PORT_ARRIVAL_DATE" type="xs:int" minOccurs="0" />
+                      <xs:element name="PORT_DEPARTURE_DATE" msprop:design-time-name="80948540-1ba2-4deb-97f2-3287965d58e2" msprop:DbColumnName="PORT_DEPARTURE_DATE" msprop:FriendlyName="PORT_DEPARTURE_DATE" type="xs:int" minOccurs="0" />
+                      <xs:element name="VOYAGE_TRAJECT_DISTANCE" msprop:design-time-name="11bb3351-508d-4ac5-b0f6-14e8b3c82227" msprop:DbColumnName="VOYAGE_TRAJECT_DISTANCE" msprop:FriendlyName="VOYAGE_TRAJECT_DISTANCE" type="xs:int" minOccurs="0" />
+                      <xs:element name="IDLE_DAYS" msprop:design-time-name="3f7bee6f-6461-4372-b6a2-1388463c398d" msprop:DbColumnName="IDLE_DAYS" type="xs:int" minOccurs="0" />
+                      <xs:element name="VOYAGE_DATE_ARRIVAL" msprop:design-time-name="1f306931-8fa2-4c62-9671-98ec4a92dc41" msprop:DbColumnName="VOYAGE_DATE_ARRIVAL" type="xs:int" minOccurs="0" />
+                      <xs:element name="TOTAL_DAYS_VOYAGE" msprop:design-time-name="a717c862-555e-4000-b904-da7de5ecb169" msprop:DbColumnName="TOTAL_DAYS_VOYAGE" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_FACT_SHIPMENT" msprop:design-time-name="9bece296-03a8-4e43-8002-ff2d9ed0f038" msprop:FriendlyName="FACT_SHIPMENT" msprop:DbSchemaName="dbo" msprop:DbTableName="FACT_SHIPMENT" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ROW_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="6794d3b5-894d-4fa9-a2b1-c665d5fca3e6" msprop:DbColumnName="ROW_ID" msprop:FriendlyName="ROW_ID" type="xs:int" />
+                      <xs:element name="SHIPMENT_ID" msprop:design-time-name="197e5cc3-5b94-4ee1-884b-63f70be83b0d" msprop:DbColumnName="SHIPMENT_ID" msprop:FriendlyName="SHIPMENT_ID" type="xs:int" />
+                      <xs:element name="VOYAGE_ID" msprop:design-time-name="252313c9-0455-4be0-a77c-1b737549c212" msprop:DbColumnName="VOYAGE_ID" msprop:FriendlyName="VOYAGE_ID" type="xs:int" />
+                      <xs:element name="CONSIGNOR_ID" msprop:design-time-name="9dc461da-3e1e-45ab-b98a-f12457f47cde" msprop:DbColumnName="CONSIGNOR_ID" msprop:FriendlyName="CONSIGNOR_ID" type="xs:int" />
+                      <xs:element name="CONTAINER_ID" msprop:design-time-name="73c43125-081d-44dc-b26c-e8fc99a01a01" msprop:DbColumnName="CONTAINER_ID" msprop:FriendlyName="CONTAINER_ID" type="xs:int" />
+                      <xs:element name="ITEM_ID" msprop:design-time-name="b1e9ab09-2ad7-4587-8a86-950b99eec614" msprop:DbColumnName="ITEM_ID" msprop:FriendlyName="ITEM_ID" type="xs:int" />
+                      <xs:element name="PORT_ID_FROM" msprop:design-time-name="35064c0f-589e-4492-bb93-f787e53f1229" msprop:DbColumnName="PORT_ID_FROM" msprop:FriendlyName="PORT_ID_FROM" type="xs:int" />
+                      <xs:element name="PORT_ID_TO" msprop:design-time-name="68e63a58-adf1-433e-8849-18a7ec7e98cc" msprop:DbColumnName="PORT_ID_TO" msprop:FriendlyName="PORT_ID_TO" type="xs:int" />
+                      <xs:element name="SHIPMENT_DISTANCE" msprop:design-time-name="db87db40-9712-48a7-8094-2c88e30aa40c" msprop:DbColumnName="SHIPMENT_DISTANCE" msprop:FriendlyName="SHIPMENT_DISTANCE" type="xs:int" />
+                      <xs:element name="SHIPMENT_CONTAINER_MIN_RANGE" msprop:design-time-name="db502ad3-0a76-4507-8e9a-65a681444308" msprop:DbColumnName="SHIPMENT_CONTAINER_MIN_RANGE" msprop:FriendlyName="SHIPMENT_CONTAINER_MIN_RANGE" type="xs:int" minOccurs="0" />
+                      <xs:element name="SHIPMENT_CONTAINER_MAX_RANGE" msprop:design-time-name="c0a2217c-a56e-4218-96b9-659d91a864ad" msprop:DbColumnName="SHIPMENT_CONTAINER_MAX_RANGE" msprop:FriendlyName="SHIPMENT_CONTAINER_MAX_RANGE" type="xs:int" minOccurs="0" />
+                      <xs:element name="SHIPMENT_CONTAINER_AMOUNT" msprop:design-time-name="84fc59bb-83dd-46dd-bf4a-3f7fc394c028" msprop:DbColumnName="SHIPMENT_CONTAINER_AMOUNT" msprop:FriendlyName="SHIPMENT_CONTAINER_AMOUNT" type="xs:int" minOccurs="0" />
+                      <xs:element name="EXTRACTION_DATE" msprop:design-time-name="b58ff287-def8-471b-ab2b-4a32c38ba150" msprop:DbColumnName="EXTRACTION_DATE" msprop:FriendlyName="EXTRACTION_DATE" type="xs:dateTime" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_ITEM" msprop:design-time-name="d1ed2840-4c26-40df-b33e-ec4d09208816" msprop:FriendlyName="DIM_ITEM" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_ITEM" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ITEM_ID" msprop:design-time-name="84901a62-b245-46bd-a0e1-48be7217053f" msprop:DbColumnName="ITEM_ID" msprop:FriendlyName="ITEM_ID" type="xs:int" />
+                      <xs:element name="ITEM_DESCRIPTION" msprop:design-time-name="9bb992ad-606f-4596-be74-377c53e2c15b" msprop:DbColumnName="ITEM_DESCRIPTION" msprop:FriendlyName="ITEM_DESCRIPTION">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ITEM_CATEGORY" msprop:design-time-name="b7b6a4e1-95b3-4064-8f7e-735ae21f2808" msprop:DbColumnName="ITEM_CATEGORY" msprop:FriendlyName="ITEM_CATEGORY">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ITEM_MANUFACTURER" msprop:design-time-name="6d774336-6492-4393-a877-19f342d49e1c" msprop:DbColumnName="ITEM_MANUFACTURER" msprop:FriendlyName="ITEM_MANUFACTURER">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ITEM_STORAGE_TYPE" msprop:design-time-name="5bce4c9c-ce15-4b75-8b07-ccdb5001cd83" msprop:DbColumnName="ITEM_STORAGE_TYPE" msprop:FriendlyName="ITEM_STORAGE_TYPE">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ITEM_HAZARD_FLAG" msprop:design-time-name="d2a752dd-cdc9-4150-a347-57954e2437ca" msprop:DbColumnName="ITEM_HAZARD_FLAG" msprop:FriendlyName="ITEM_HAZARD_FLAG">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_CONTAINER" msprop:design-time-name="6a8aec13-e92a-4322-89ce-1b977bf53685" msprop:FriendlyName="DIM_CONTAINER" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_CONTAINER" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CONTAINER_ID" msprop:design-time-name="6297506c-5d45-4787-941e-aa0cc8e643e5" msprop:DbColumnName="CONTAINER_ID" msprop:FriendlyName="CONTAINER_ID" type="xs:int" />
+                      <xs:element name="CONTAINER_TYPE" msprop:design-time-name="6f0a2767-5e6b-4a34-be70-5a20e4ea0292" msprop:DbColumnName="CONTAINER_TYPE" msprop:FriendlyName="CONTAINER_TYPE">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONTAINER_REFRIGERATION_FLAG" msprop:design-time-name="0125f894-63ca-4a52-8fb8-12f36610a317" msprop:DbColumnName="CONTAINER_REFRIGERATION_FLAG" msprop:FriendlyName="CONTAINER_REFRIGERATION_FLAG" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONTAINER_POWER_FLAG" msprop:design-time-name="2dc8345d-5324-489f-9938-f351beb18b3e" msprop:DbColumnName="CONTAINER_POWER_FLAG" msprop:FriendlyName="CONTAINER_POWER_FLAG">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONTAINER_LENGTH" msprop:design-time-name="6915a27a-a085-4698-88bf-4d7eafb2ef80" msprop:DbColumnName="CONTAINER_LENGTH" msprop:FriendlyName="CONTAINER_LENGTH" type="xs:decimal" />
+                      <xs:element name="CONTAINER_CUBES" msprop:design-time-name="8a469024-e655-466a-8fe1-5ddc0af21fad" msprop:DbColumnName="CONTAINER_CUBES" msprop:FriendlyName="CONTAINER_CUBES" type="xs:int" />
+                      <xs:element name="CONTAINER_EUROPRICE_PER_KM" msprop:design-time-name="745a7a2f-44ec-45ac-92f9-6ea612cb5775" msprop:DbColumnName="CONTAINER_EUROPRICE_PER_KM" msprop:FriendlyName="CONTAINER_EUROPRICE_PER_KM" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_CONSIGNOR" msprop:design-time-name="b16068a9-8298-4663-acf1-0f8d5acf5627" msprop:FriendlyName="DIM_CONSIGNOR" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_CONSIGNOR" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CONSIGNOR_ID" msprop:design-time-name="ae3b77d6-754a-40a4-804c-115cf62b703b" msprop:DbColumnName="CONSIGNOR_ID" msprop:FriendlyName="CONSIGNOR_ID" type="xs:int" />
+                      <xs:element name="CONSIGNOR_NAME" msprop:design-time-name="f68cff2e-8d1d-4f18-9e93-90e3b0be9d96" msprop:DbColumnName="CONSIGNOR_NAME" msprop:FriendlyName="CONSIGNOR_NAME">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONSIGNOR_CITY" msprop:design-time-name="8a276267-cfe6-4b4a-8821-813a8850c09c" msprop:DbColumnName="CONSIGNOR_CITY" msprop:FriendlyName="CONSIGNOR_CITY" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONSIGNOR_COUNTRY" msprop:design-time-name="869e59af-08df-4040-b004-68a84228c676" msprop:DbColumnName="CONSIGNOR_COUNTRY" msprop:FriendlyName="CONSIGNOR_COUNTRY">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CONSIGNOR_DISCOUNT" msprop:design-time-name="159121c5-1b3c-4170-9c03-a2851d692932" msprop:DbColumnName="CONSIGNOR_DISCOUNT" msprop:FriendlyName="CONSIGNOR_DISCOUNT">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_PORT" />
+              <xs:field xpath="PORT_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_SHIP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_SHIP" />
+              <xs:field xpath="SHIP_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_CALENDAR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_CALENDAR" />
+              <xs:field xpath="DATE_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_FACT_VOYAGE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="ROW_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_FACT_SHIPMENT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="ROW_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_ITEM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_ITEM" />
+              <xs:field xpath="ITEM_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_CONTAINER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_CONTAINER" />
+              <xs:field xpath="CONTAINER_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_CONSIGNOR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_CONSIGNOR" />
+              <xs:field xpath="CONSIGNOR_ID" />
+            </xs:unique>
+            <xs:keyref name="FK_FACT_SHIPMENT_DIM_CONSIGNOR" refer="dbo_DIM_CONSIGNOR_Constraint1">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="CONSIGNOR_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_SHIPMENT_DIM_ITEM" refer="dbo_DIM_ITEM_Constraint1">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="ITEM_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_SHIPMENT_DIM_PORT" refer="Constraint1">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="PORT_ID_FROM" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_SHIPMENT_DIM_CONTAINER" refer="dbo_DIM_CONTAINER_Constraint1">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="CONTAINER_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_SHIPMENT_DIM_PORT1" refer="Constraint1">
+              <xs:selector xpath=".//dbo_FACT_SHIPMENT" />
+              <xs:field xpath="PORT_ID_TO" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_PORT2" refer="Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_PORT">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="VOYAGE_PORT_ID_START" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_CALENDAR3" refer="dbo_DIM_CALENDAR_Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_CALENDAR2">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="PORT_ARRIVAL_DATE" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_CALENDAR1" refer="dbo_DIM_CALENDAR_Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_CALENDAR3">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="PORT_DEPARTURE_DATE" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_SHIP" refer="dbo_DIM_SHIP_Constraint1">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="SHIP_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_PORT" refer="Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_PORT31">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="PORT_NEXT" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_PORT1" refer="Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_PORT2">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="PORT_CURRENT" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_CALENDAR2" refer="dbo_DIM_CALENDAR_Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_CALENDAR">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="VOYAGE_DATE_DEPARTMENT" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_PORT3" refer="Constraint1" msdata:RelationName="FK_FACT_VOYAGE_DIM_PORT11">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="VOYAGE_PORT_ID_END" />
+            </xs:keyref>
+            <xs:keyref name="FK_FACT_VOYAGE_DIM_CALENDAR11" refer="dbo_DIM_CALENDAR_Constraint1">
+              <xs:selector xpath=".//dbo_FACT_VOYAGE" />
+              <xs:field xpath="VOYAGE_DATE_ARRIVAL" />
+            </xs:keyref>
+          </xs:element>
+        </xs:schema>
+        <s2126940_x0020_Project3 xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>zxmpUcNyNktRzIMQukpDBxOxlaw=3/27/2019 7:23:48 PM3/27/2019 7:20:15 PM</TimeStamp>
+        <TimeStamp>+ebxKNWT5+8msCS9npSzbrPtdwY=3/28/2019 11:20:10 AM3/27/2019 7:20:15 PM</TimeStamp>
         <ID>
           <String>DataSourceView Kramse</String>
         </ID>
@@ -75,7 +75,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>V+a3wf2DrkkMWx4HOQXOSiOXuV4=3/27/2019 8:10:37 PM3/27/2019 7:27:43 PMP0iZFho6W5OzhMrqmnp/cbnFDSE=3/27/2019 7:27:43 PM3/27/2019 7:27:43 PM</TimeStamp>
+        <TimeStamp>Hsts/IBkBu9wz5tlMH966fntIms=3/28/2019 3:13:23 PM3/27/2019 7:27:43 PMP0iZFho6W5OzhMrqmnp/cbnFDSE=3/28/2019 11:20:10 AM3/27/2019 7:27:43 PM</TimeStamp>
         <ID>
           <String>DataSourceView Kramse</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-03-27T19:10:51.58Z</LastDeployed>
+  <LastDeployed>2019-03-28T14:13:36.396667Z</LastDeployed>
 </DeploymentSnapshot>

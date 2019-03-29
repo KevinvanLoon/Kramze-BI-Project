@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>yetanothercube</Database>
+    <Server>http://AEI-SQL.AVANS.NL/olap/msmdpump.dll</Server>
+    <ConnectionString>Data Source=http://AEI-SQL.AVANS.NL/olap/msmdpump.dll;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>xTm58NVFfXh2odWy/scOtz4d1c0=3/28/2019 8:12:17 PM3/28/2019 8:11:33 PM</TimeStamp>
+        <ID>
+          <String>s2126940 Project3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>cSR+RCD2TO3tsK6dz2e7ocWwVzM=3/29/2019 1:45:09 AM3/28/2019 8:13:23 PM</TimeStamp>
+        <ID>
+          <String>s2126940 Project3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aY4rwJ68rTryB+296nxlybRoe8E=3/28/2019 8:13:51 PM3/28/2019 8:13:51 PM</TimeStamp>
+        <ID>
+          <String>DIM PORT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YbJmNqyUF/XnQXaxXyEPHgx1FMA=3/28/2019 8:13:58 PM3/28/2019 8:13:58 PM</TimeStamp>
+        <ID>
+          <String>DIM SHIP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>wHjk9u2d1SY9TA9LYK7Q8dlSK8I=3/28/2019 11:35:50 PM3/28/2019 8:14:12 PM</TimeStamp>
+        <ID>
+          <String>DIM CALENDAR</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>h6+GyW5x0g/c3j9Q1wTEi9l0PKQ=3/28/2019 8:14:22 PM3/28/2019 8:14:21 PM</TimeStamp>
+        <ID>
+          <String>DIM ITEM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KWLkQ8U8OypoPSHhXQdBrzHjE8g=3/28/2019 8:14:31 PM3/28/2019 8:14:31 PM</TimeStamp>
+        <ID>
+          <String>DIM CONTAINER</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>41FQB0SCb4l1fNw9O9HbrF44R14=3/28/2019 8:14:40 PM3/28/2019 8:14:40 PM</TimeStamp>
+        <ID>
+          <String>DIM CONSIGNOR</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>J1EZnZypES8ilL+rdtGW65NqFSg=3/29/2019 1:54:55 PM3/28/2019 8:15:14 PM1KoVwmqdW/QBYclX9KDODBi0Hh0=3/29/2019 12:27:36 PM3/28/2019 8:15:14 PM</TimeStamp>
+        <ID>
+          <String>s2126940 Project3</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Q73XsBVk0HNTUzkvBXrg1sKhPqk=3/28/2019 8:10:16 PM3/28/2019 8:10:16 PM</TimeStamp>
+      <ID>
+        <String>yetanothercube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-03-29T12:55:00.6Z</LastDeployed>
+</DeploymentSnapshot>

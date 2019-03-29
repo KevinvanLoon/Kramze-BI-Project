@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SOURCES_TO_PSA"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{E0E7C704-A3B0-4D80-87D8-1B235C07CE47}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{839AD7B5-E9A6-4F98-9257-57D053E9CED3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6114,7 +6114,7 @@
     design-time-name="Package\Load Voyage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Load Voyage\OLE DB Source"
@@ -6122,7 +6122,7 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Load Voyage\OLE DB Destination"
-          TopLeft="246,464" />
+          TopLeft="227,515" />
         <NodeLayout
           Size="154,42"
           Id="Package\Load Voyage\Derived Column"
@@ -6146,9 +6146,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6157,34 +6155,32 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30.5,54"
+              EndConnector="11.5,105"
               Start="0,0"
-              End="30.5,46.5">
+              End="11.5,97.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
+                    End="0,48.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
+                    Point1="0,48.5"
+                    Point2="0,52.5"
+                    Point3="4,52.5" />
                   <mssgle:LineSegment
-                    End="26.5,27" />
+                    End="7.5,52.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="26.5,27"
-                    Point2="30.5,27"
-                    Point3="30.5,31" />
+                    Point1="7.5,52.5"
+                    Point2="11.5,52.5"
+                    Point3="11.5,56.5" />
                   <mssgle:LineSegment
-                    End="30.5,46.5" />
+                    End="11.5,97.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

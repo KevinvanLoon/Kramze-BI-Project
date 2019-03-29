@@ -1,0 +1,160 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="47381cf6-58a3-465e-8752-2807138c040e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM PORT</ID>
+  <Name>DIM PORT</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="530a9617-3b41-45ec-98f8-4f102159cd56">
+    <DataSourceViewID>s2126940 Project3</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="41eb6e5a-5b61-4307-83f5-54afc5942505">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="ef9806ff-32fc-412d-86be-4e48f778ee29">
+      <ID>PORT ID</ID>
+      <Name>PORT ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f96af9e1-904c-430e-9987-286d26c20ab6">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="826b49fc-f30e-4c14-ab2f-e6efb44656ad">
+            <TableID>dbo_DIM_PORT</TableID>
+            <ColumnID>PORT_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ee73ca37-554e-4cbc-ae4a-9b7101726529">
+          <AttributeID>PORT NAME</AttributeID>
+          <Name>PORT NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6c346d7-38a5-467d-b80b-54ecffda5e3b">
+          <AttributeID>PORT COUNTRY</AttributeID>
+          <Name>PORT COUNTRY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c4bde64e-8ac8-4238-8fa9-b97333a5522f">
+          <AttributeID>PORT DISTANCE FROM OSLO</AttributeID>
+          <Name>PORT DISTANCE FROM OSLO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7996cd4e-35e6-4562-a94f-52f9132dd9f5">
+          <AttributeID>PORT DISTANCE FROM PIRAEUS</AttributeID>
+          <Name>PORT DISTANCE FROM PIRAEUS</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bc07ae00-cedd-432c-8704-c41be0b7fdfd">
+      <ID>PORT NAME</ID>
+      <Name>PORT NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15fc4f55-4508-40aa-9e61-fc5982609bd7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e88d1e33-3e1d-4c12-9f82-dd18d4f9d729">
+            <TableID>dbo_DIM_PORT</TableID>
+            <ColumnID>PORT_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fbd46097-b8ac-4819-b146-7972477c14a0">
+      <ID>PORT COUNTRY</ID>
+      <Name>PORT COUNTRY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc1a2796-fef4-46ce-8c6b-794c32e5d213">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="199149b1-1096-457c-a014-a2b0aaef3f83">
+            <TableID>dbo_DIM_PORT</TableID>
+            <ColumnID>PORT_COUNTRY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="336a8584-2d69-462a-a913-cf28c224fd65">
+      <ID>PORT DISTANCE FROM OSLO</ID>
+      <Name>PORT DISTANCE FROM OSLO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f047979-9571-4f7f-a766-c61c76fe71be">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c245795-608b-4263-935e-3ac6bea0468a">
+            <TableID>dbo_DIM_PORT</TableID>
+            <ColumnID>PORT_DISTANCE_FROM_OSLO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b6590cdb-3f61-48de-85b1-3c3797e88227">
+      <ID>PORT DISTANCE FROM PIRAEUS</ID>
+      <Name>PORT DISTANCE FROM PIRAEUS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="38bd9705-2a90-4e06-a8e2-962ed9e8afc0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b434f0af-818c-4dee-9b14-ee99f7c32149">
+            <TableID>dbo_DIM_PORT</TableID>
+            <ColumnID>PORT_DISTANCE_FROM_PIRAEUS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
